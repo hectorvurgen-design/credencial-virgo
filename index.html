@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Credencial Digital | Virgo Ingenieros</title>
+
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+
+    margin: 0;
+
+    width: 100%;
+    min-height: 100%;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+#videoFondo {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================
+   OSCURECER VIDEO
+========================= */
+
+.capaOscura {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 15, 35, 0.45);
+
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contenedor {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+
+/* =========================
+   CREDENCIAL
+========================= */
+
+.credencial {
+
+    width: 100%;
+
+    max-width: 390px;
+
+    background: rgba(255,255,255,0.96);
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.55);
+
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.encabezado {
+
+    background:
+        linear-gradient(
+            135deg,
+            #06182d,
+            #0d4d82
+        );
+
+    padding: 25px 20px 22px;
+
+    text-align: center;
+
+    color: white;
+
+}
+
+
+.logo {
+
+    width: 85px;
+
+    height: 85px;
+
+    object-fit: contain;
+
+    background: white;
+
+    border-radius: 50%;
+
+    padding: 7px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.empresaTitulo {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.subtitulo {
+
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    opacity: 0.85;
+
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.fotoContenedor {
+
+    text-align: center;
+
+    margin-top: -10px;
+
+}
+
+
+.foto {
+
+    width: 155px;
+
+    height: 155px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid white;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.3);
+
+}
+
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.contenido {
+
+    padding: 10px 22px 25px;
+
+    text-align: center;
+
+}
+
+
+.nombre {
+
+    margin-top: 12px;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #172033;
+
+}
+
+
+.puesto {
+
+    margin-top: 6px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: #0b4d82;
+
+}
+
+
+/* =========================
+   DATOS
+========================= */
+
+.datos {
+
+    margin-top: 22px;
+
+}
+
+
+.dato {
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: left;
+
+    background: #f1f4f7;
+
+    border-radius: 12px;
+
+    padding: 12px 14px;
+
+    margin-top: 9px;
+
+}
+
+
+.icono {
+
+    width: 35px;
+
+    font-size: 20px;
+
+    text-align: center;
+
+}
+
+
+.informacion {
+
+    margin-left: 8px;
+
+}
+
+
+.etiqueta {
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    color: #77808c;
+
+    text-transform: uppercase;
+
+}
+
+
+.valor {
+
+    margin-top: 2px;
+
+    font-size: 14px;
+
+    color: #202938;
+
+}
+
+
+/* =========================
+   ESTADO
+========================= */
+
+.estado {
+
+    margin-top: 18px;
+
+    padding: 11px;
+
+    border-radius: 20px;
+
+    background: #e8f7ed;
+
+    color: #16823b;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================
+   PIE
+========================= */
+
+.pie {
+
+    padding: 14px;
+
+    border-top: 1px solid #e8e8e8;
+
+    text-align: center;
+
+    font-size: 10px;
+
+    color: #777;
+
+}
+
+
+.id {
+
+    margin-top: 3px;
+
+    font-weight: bold;
+
+    color: #555;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- VIDEO -->
+
+<video
+    id="videoFondo"
+    autoplay
+    muted
+    loop
+    playsinline>
+
+    <source
+        src="fondo.mp4"
+        type="video/mp4">
+
+</video>
+
+
+<!-- OSCURECER VIDEO -->
+
+<div class="capaOscura"></div>
+
+
+<!-- CONTENEDOR -->
+
+<div class="contenedor">
+
+
+    <!-- CREDENCIAL -->
+
+    <div class="credencial">
+
+
+        <!-- ENCABEZADO -->
+
+        <div class="encabezado">
+
+            <img
+                src="logo.png"
+                class="logo"
+                alt="Virgo Ingenieros">
+
+
+            <div class="empresaTitulo">
+
+                VIRGO INGENIEROS
+
+            </div>
+
+
+            <div class="subtitulo">
+
+                CREDENCIAL DIGITAL
+
+            </div>
+
+        </div>
+
+
+        <!-- FOTO -->
+
+        <div class="fotoContenedor">
+
+            <img
+                src="foto.jpg"
+                class="foto"
+                alt="Fotografía">
+
+        </div>
+
+
+        <!-- INFORMACIÓN -->
+
+        <div class="contenido">
+
+
+            <div class="nombre">
+
+                Héctor Virgen Ríos
+
+            </div>
+
+
+            <div class="puesto">
+
+                Ingeniero de Pruebas
+
+            </div>
+
+
+            <div class="datos">
+
+
+                <div class="dato">
+
+                    <div class="icono">
+                        🆔
+                    </div>
+
+                    <div class="informacion">
+
+                        <div class="etiqueta">
+                            Identificación
+                        </div>
+
+                        <div class="valor">
+                            VI-001
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <div class="icono">
+                        🏢
+                    </div>
+
+                    <div class="informacion">
+
+                        <div class="etiqueta">
+                            Empresa
+                        </div>
+
+                        <div class="valor">
+                            Virgo Ingenieros Electromecánicos
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <div class="icono">
+                        📅
+                    </div>
+
+                    <div class="informacion">
+
+                        <div class="etiqueta">
+                            Vigencia
+                        </div>
+
+                        <div class="valor">
+                            31/12/2026
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <div class="icono">
+                        👤
+                    </div>
+
+                    <div class="informacion">
+
+                        <div class="etiqueta">
+                            Tipo de acceso
+                        </div>
+
+                        <div class="valor">
+                            Personal autorizado
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ESTADO -->
+
+            <div class="estado">
+
+                ✓ VIGENTE
+
+            </div>
+
+
+        </div>
+
+
+        <!-- PIE -->
+
+        <div class="pie">
+
+            Credencial digital de identificación empresarial
+
+            <div class="id">
+
+                VI-001
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
