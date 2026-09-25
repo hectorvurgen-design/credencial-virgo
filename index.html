@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>Credencial Digital | Virgo Ingenieros</title>
-
+<title>Credencial Digital - Virgo Ingenieros</title>
 
 <style>
 
@@ -17,579 +12,337 @@
     box-sizing: border-box;
 }
 
-
-html,
 body {
-
     margin: 0;
-
-    width: 100%;
-    min-height: 100%;
-
     font-family: Arial, Helvetica, sans-serif;
-
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-
-/* =========================
-   VIDEO
-========================= */
+/* VIDEO DE FONDO */
 
 #videoFondo {
-
     position: fixed;
-
     top: 0;
     left: 0;
-
-    width: 100vw;
-    height: 100vh;
-
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-
+    z-index: -2;
 }
 
-
-/* =========================
-   OSCURECER VIDEO
-========================= */
+/* CAPA OSCURA */
 
 .capaOscura {
-
     position: fixed;
-
     top: 0;
     left: 0;
-
-    width: 100vw;
-    height: 100vh;
-
+    width: 100%;
+    height: 100%;
     background: rgba(0, 15, 35, 0.45);
-
+    z-index: -1;
 }
 
-
-/* =========================
-   CONTENEDOR
-========================= */
+/* CONTENEDOR */
 
 .contenedor {
-
-    position: relative;
-
-    width: 100%;
-
     min-height: 100vh;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
-    padding: 20px;
-
+    padding: 25px;
 }
 
-
-/* =========================
-   CREDENCIAL
-========================= */
+/* CREDENCIAL */
 
 .credencial {
-
     width: 100%;
-
     max-width: 390px;
-
-    background: rgba(255,255,255,0.96);
-
+    background: rgba(255,255,255,0.95);
     border-radius: 25px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,0.55);
-
-}
-
-
-/* =========================
-   ENCABEZADO
-========================= */
-
-.encabezado {
-
-    background:
-        linear-gradient(
-            135deg,
-            #06182d,
-            #0d4d82
-        );
-
-    padding: 25px 20px 22px;
-
+    padding: 25px;
     text-align: center;
-
-    color: white;
-
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
 }
 
+/* LOGO */
 
 .logo {
-
-    width: 85px;
-
-    height: 85px;
-
-    object-fit: contain;
-
-    background: white;
-
-    border-radius: 50%;
-
-    padding: 7px;
-
+    width: 150px;
+    max-width: 70%;
     margin-bottom: 10px;
-
 }
 
-
-.empresaTitulo {
-
-    font-size: 22px;
-
-    font-weight: bold;
-
-    letter-spacing: 1px;
-
-}
-
-
-.subtitulo {
-
-    margin-top: 5px;
-
-    font-size: 12px;
-
-    opacity: 0.85;
-
-}
-
-
-/* =========================
-   FOTO
-========================= */
-
-.fotoContenedor {
-
-    text-align: center;
-
-    margin-top: -10px;
-
-}
-
+/* FOTO */
 
 .foto {
-
-    width: 155px;
-
-    height: 155px;
-
+    width: 145px;
+    height: 145px;
     object-fit: cover;
-
     border-radius: 50%;
-
-    border: 6px solid white;
-
-    box-shadow:
-        0 6px 20px rgba(0,0,0,0.3);
-
+    border: 5px solid white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    margin: 10px auto 15px;
 }
 
-
-/* =========================
-   INFORMACIÓN
-========================= */
-
-.contenido {
-
-    padding: 10px 22px 25px;
-
-    text-align: center;
-
-}
-
+/* NOMBRE */
 
 .nombre {
-
-    margin-top: 12px;
-
     font-size: 25px;
-
     font-weight: bold;
-
-    color: #172033;
-
+    color: #12233f;
+    margin: 5px 0;
 }
 
+/* PUESTO */
 
 .puesto {
-
-    margin-top: 6px;
-
-    font-size: 16px;
-
-    font-weight: bold;
-
-    color: #0b4d82;
-
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-
-/* =========================
-   DATOS
-========================= */
+/* DATOS */
 
 .datos {
-
-    margin-top: 22px;
-
+    text-align: left;
+    background: #f3f5f8;
+    border-radius: 15px;
+    padding: 15px;
 }
-
 
 .dato {
-
-    display: flex;
-
-    align-items: center;
-
-    text-align: left;
-
-    background: #f1f4f7;
-
-    border-radius: 12px;
-
-    padding: 12px 14px;
-
-    margin-top: 9px;
-
+    margin-bottom: 10px;
 }
 
-
-.icono {
-
-    width: 35px;
-
-    font-size: 20px;
-
-    text-align: center;
-
+.dato:last-child {
+    margin-bottom: 0;
 }
-
-
-.informacion {
-
-    margin-left: 8px;
-
-}
-
 
 .etiqueta {
-
-    font-size: 10px;
-
+    font-size: 12px;
+    color: #777;
     font-weight: bold;
-
-    color: #77808c;
-
     text-transform: uppercase;
-
 }
-
 
 .valor {
-
+    font-size: 15px;
+    color: #222;
     margin-top: 2px;
-
-    font-size: 14px;
-
-    color: #202938;
-
 }
 
-
-/* =========================
-   ESTADO
-========================= */
+/* ESTADO */
 
 .estado {
-
-    margin-top: 18px;
-
-    padding: 11px;
-
-    border-radius: 20px;
-
-    background: #e8f7ed;
-
-    color: #16823b;
-
-    font-size: 13px;
-
+    margin: 18px auto 5px;
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: #168a45;
+    color: white;
     font-weight: bold;
-
+    font-size: 14px;
 }
 
-
-/* =========================
-   PIE
-========================= */
+/* PIE */
 
 .pie {
-
-    padding: 14px;
-
-    border-top: 1px solid #e8e8e8;
-
-    text-align: center;
-
-    font-size: 10px;
-
+    margin-top: 18px;
+    font-size: 12px;
     color: #777;
-
 }
 
+/* ERROR */
 
-.id {
-
-    margin-top: 3px;
-
+.error {
+    color: #b00020;
     font-weight: bold;
-
-    color: #555;
-
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 </style>
-
 </head>
-
 
 <body>
 
-
 <!-- VIDEO -->
 
-<video
-    id="videoFondo"
-    autoplay
-    muted
-    loop
-    playsinline>
-
-    <source
-        src="fondo.mp4"
-        type="video/mp4">
-
+<video id="videoFondo" autoplay muted loop playsinline>
+    <source src="fondo.mp4" type="video/mp4">
 </video>
-
-
-<!-- OSCURECER VIDEO -->
 
 <div class="capaOscura"></div>
 
-
-<!-- CONTENEDOR -->
+<!-- CONTENIDO -->
 
 <div class="contenedor">
 
+    <div class="credencial" id="credencial">
 
-    <!-- CREDENCIAL -->
+        <img src="logo.png" class="logo" alt="Virgo Ingenieros">
 
-    <div class="credencial">
+        <img id="foto" class="foto" src="" alt="Fotografía del empleado">
 
+        <div id="nombre" class="nombre">
+            Cargando...
+        </div>
 
-        <!-- ENCABEZADO -->
+        <div id="puesto" class="puesto"></div>
 
-        <div class="encabezado">
+        <div class="datos">
 
-            <img
-                src="logo.png"
-                class="logo"
-                alt="Virgo Ingenieros">
-
-
-            <div class="empresaTitulo">
-
-                VIRGO INGENIEROS
-
+            <div class="dato">
+                <div class="etiqueta">Empresa</div>
+                <div id="empresa" class="valor"></div>
             </div>
 
+            <div class="dato">
+                <div class="etiqueta">ID</div>
+                <div id="idEmpleado" class="valor"></div>
+            </div>
 
-            <div class="subtitulo">
+            <div class="dato">
+                <div class="etiqueta">Vigencia</div>
+                <div id="vigencia" class="valor"></div>
+            </div>
 
-                CREDENCIAL DIGITAL
-
+            <div class="dato">
+                <div class="etiqueta">Tipo</div>
+                <div id="tipo" class="valor"></div>
             </div>
 
         </div>
 
-
-        <!-- FOTO -->
-
-        <div class="fotoContenedor">
-
-            <img
-                src="foto.jpg"
-                class="foto"
-                alt="Fotografía">
-
-        </div>
-
-
-        <!-- INFORMACIÓN -->
-
-        <div class="contenido">
-
-
-            <div class="nombre">
-
-                Héctor Virgen Ríos
-
-            </div>
-
-
-            <div class="puesto">
-
-                Ingeniero de Pruebas
-
-            </div>
-
-
-            <div class="datos">
-
-
-                <div class="dato">
-
-                    <div class="icono">
-                        🆔
-                    </div>
-
-                    <div class="informacion">
-
-                        <div class="etiqueta">
-                            Identificación
-                        </div>
-
-                        <div class="valor">
-                            VI-001
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="dato">
-
-                    <div class="icono">
-                        🏢
-                    </div>
-
-                    <div class="informacion">
-
-                        <div class="etiqueta">
-                            Empresa
-                        </div>
-
-                        <div class="valor">
-                            Virgo Ingenieros Electromecánicos
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="dato">
-
-                    <div class="icono">
-                        📅
-                    </div>
-
-                    <div class="informacion">
-
-                        <div class="etiqueta">
-                            Vigencia
-                        </div>
-
-                        <div class="valor">
-                            31/12/2026
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="dato">
-
-                    <div class="icono">
-                        👤
-                    </div>
-
-                    <div class="informacion">
-
-                        <div class="etiqueta">
-                            Tipo de acceso
-                        </div>
-
-                        <div class="valor">
-                            Personal autorizado
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-            <!-- ESTADO -->
-
-            <div class="estado">
-
-                ✓ VIGENTE
-
-            </div>
-
-
-        </div>
-
-
-        <!-- PIE -->
+        <div id="estado" class="estado"></div>
 
         <div class="pie">
-
-            Credencial digital de identificación empresarial
-
-            <div class="id">
-
-                VI-001
-
-            </div>
-
+            Virgo Ingenieros Electromecánicos
         </div>
 
-
     </div>
-
 
 </div>
 
 
-</body>
+<script>
 
+async function cargarEmpleado() {
+
+    try {
+
+        /* Obtener el ID desde la dirección */
+
+        const parametros = new URLSearchParams(window.location.search);
+
+        const id = parametros.get("id");
+
+        /* Si no hay ID */
+
+        if (!id) {
+
+            mostrarError("No se especificó una credencial.");
+
+            return;
+        }
+
+        /* Cargar empleados.json */
+
+        const respuesta = await fetch("empleados.json");
+
+        if (!respuesta.ok) {
+
+            throw new Error("No se pudo cargar empleados.json");
+
+        }
+
+        const empleados = await respuesta.json();
+
+        /* Buscar empleado */
+
+        const empleado = empleados.find(
+            persona => persona.id.toUpperCase() === id.toUpperCase()
+        );
+
+        /* Si no existe */
+
+        if (!empleado) {
+
+            mostrarError("Credencial no encontrada.");
+
+            return;
+        }
+
+        /* Mostrar información */
+
+        document.getElementById("nombre").textContent =
+            empleado.nombre;
+
+        document.getElementById("puesto").textContent =
+            empleado.puesto;
+
+        document.getElementById("empresa").textContent =
+            empleado.empresa;
+
+        document.getElementById("idEmpleado").textContent =
+            empleado.id;
+
+        document.getElementById("vigencia").textContent =
+            empleado.vigencia;
+
+        document.getElementById("tipo").textContent =
+            empleado.tipo;
+
+        document.getElementById("estado").textContent =
+            empleado.estado;
+
+        /* Foto */
+
+        document.getElementById("foto").src =
+            empleado.foto;
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+        mostrarError("No se pudo cargar la credencial.");
+
+    }
+
+}
+
+
+/* Mostrar error */
+
+function mostrarError(mensaje) {
+
+    document.getElementById("credencial").innerHTML = `
+
+        <img src="logo.png"
+             class="logo"
+             alt="Virgo Ingenieros">
+
+        <div class="error">
+            ${mensaje}
+        </div>
+
+        <div>
+            Verifica el código de la credencial.
+        </div>
+
+    `;
+
+}
+
+
+/* Iniciar */
+
+cargarEmpleado();
+
+</script>
+
+</body>
 </html>
