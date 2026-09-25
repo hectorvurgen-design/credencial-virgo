@@ -1,0 +1,22 @@
+[
+    {
+        "id": "VI-001",
+        "nombre": "Héctor Virgen Ríos",
+        "puesto": "Ingeniero de Pruebas",
+        "empresa": "Virgo Ingenieros Electromecánicos",
+        "vigencia": "31/12/2026",
+        "estado": "VIGENTE",
+        "tipo": "Personal autorizado",
+        "foto": "foto.jpg"
+    },
+{
+ "id": "VI-002",
+        "nombre": "Manuel Ignacio Navarro Reyes",
+        "puesto": "Ingeniero de Pruebas",
+        "empresa": "Virgo Ingenieros Electromecánicos",
+        "vigencia": "31/12/2026",
+        "estado": "VIGENTE",
+        "tipo": "Personal autorizado",
+        "foto": "foto2.jpg"
+}
+]
