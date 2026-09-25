@@ -4,7 +4,7 @@
         "nombre": "Héctor Virgen Ríos",
         "puesto": "Ingeniero de Pruebas",
         "empresa": "Virgo Ingenieros Electromecánicos",
-        "vigencia": "31/12/2025",
+        "vigencia": "2025-12-31",
         "estado": "VIGENTE",
         "tipo": "Personal autorizado",
         "foto": "foto.jpg"
@@ -14,7 +14,7 @@
         "nombre": "Manuel Ignacio Navarro Reyes",
         "puesto": "Ingeniero de Pruebas",
         "empresa": "Virgo Ingenieros Electromecánicos",
-        "vigencia": "31/12/2026",
+        "vigencia": "2025-12-31",
         "estado": "VIGENTE",
         "tipo": "Personal autorizado",
         "foto": "foto2.jpg"
