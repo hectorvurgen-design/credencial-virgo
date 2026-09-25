@@ -7,7 +7,7 @@
         "vigencia": "2026-12-31",
         "estado": "VIGENTE",
         "tipo": "Personal autorizado",
-        "foto": "foto.jpg"
+        "foto": "HVR.jpg"
     },
 {
  "id": "VI-002",
@@ -17,6 +17,16 @@
         "vigencia": "2026-12-31",
         "estado": "VIGENTE",
         "tipo": "Personal autorizado",
-        "foto": "foto2.jpg"
+        "foto": "MINR.jpg"
+},
+{
+ "id": "VI-003",
+        "nombre": "Ricardo Martinez Aguilar",
+        "puesto": "Ingeniero de Pruebas",
+        "empresa": "Virgo Ingenieros Electromecánicos",
+        "vigencia": "2026-12-31",
+        "estado": "VIGENTE",
+        "tipo": "Personal autorizado",
+        "foto": "RMA.jpg"
 }
 ]
